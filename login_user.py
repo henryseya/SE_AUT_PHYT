@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 #caja_de_busqueda.send_keys(Keys.ENTER)
 #---------------------------------------------------
-explorador = webdriver.Chrome()
-#explorador = webdriver.Firefox()
+#explorador = webdriver.Chrome()
+explorador = webdriver.Firefox()
 #explorador = webdriver.Edge()
 #miweb.set_window_size(1200, 600)
 explorador.maximize_window()
