@@ -4,20 +4,28 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 #caja_de_busqueda.send_keys(Keys.ENTER)
 #---------------------------------------------------
-#explorador = webdriver.Chrome()
-explorador = webdriver.Firefox()
-#explorador = webdriver.Edge()
+driver = webdriver.Chrome()
+#driver = webdriver.Firefox()
+#driver = webdriver.Edge()
 #miweb.set_window_size(1200, 600)
-explorador.maximize_window()
-explorador.get("https://app.swevenbpm.com/")
+driver.maximize_window()
+driver.get("https://app.swevenbpm.com/")
 #---------------------------------------------------------------
-usuario = explorador.find_element(By.ID,"email")
-usuario.send_keys("henry.herrera+vbqa@technoglobalinc.com")
+txt_usuario = driver.find_element(By.ID,"email")
+txt_usuario.clear
+txt_usuario.send_keys("henry.herrera+vbqa@technoglobalinc.com")
 #---------------------------------------------------------------
-contrasena = explorador.find_element(By.ID,"password")
-contrasena.send_keys("Yase2241$")
+txt_contrasena = driver.find_element(By.ID,"password")
+txt_contrasena.clear
+txt_contrasena.send_keys("Yase2241$")
 #---------------------------------------------------------------
-Pboton= explorador.find_element(By.CSS_SELECTOR, ".accounts--btn").click()
+btn_Pboton= driver.find_element(By.CSS_SELECTOR, ".accounts--btn").click()
 #---------------------------------------------------------------
-time.sleep(10)
-explorador.quit()
+assert driver.title == 'SWEVEN-Portal','ACCESO FALLÓ'
+
+if driver.title == 'SWEVEN-Portal':
+    print("ACCESO CORRECTO")
+else:
+    Print ("FALLÓ ACCESO")
+time.sleep(5)
+driver.quit()
