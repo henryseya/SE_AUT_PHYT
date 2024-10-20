@@ -1,4 +1,3 @@
-
 #--------------------Librerías
 import time
 from selenium import webdriver
@@ -71,8 +70,3 @@ time.sleep(1)
 
 #-----Cerrando explorador
 driver.close()
-
-
-
-           
-
