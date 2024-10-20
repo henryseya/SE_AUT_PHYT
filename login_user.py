@@ -27,5 +27,5 @@ if driver.title == 'SWEVEN-Portal':
     print("ACCESO CORRECTO")
 else:
     Print ("FALLÓ ACCESO")
-time.sleep(5)
+time.sleep(4)
 driver.quit()
