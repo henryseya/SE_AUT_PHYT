@@ -18,22 +18,23 @@ time.sleep(1)
 #driver.find_element(By.ID,'userName').send_keys('Henry Herrera')
 txt_username = driver.find_element(By.ID,'userName')
 txt_username.send_keys('Henry Herrera')
-
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 txt_email = driver.find_element(By.ID,'userEmail')
 txt_email.send_keys('henry.herrera@insti.com')
-
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 txt_address = driver.find_element(By.ID,'currentAddress')
 txt_address.send_keys('Maracay')
-
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 txt_perm_addres = driver.find_element(By.ID,'permanentAddress')
 txt_perm_addres.send_keys('Montaña Fresca')#+Keys.TAB
 time.sleep(1)
 txt_perm_addres.send_keys(Keys.TAB)
-
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 time.sleep(1)
 
 btn_submit = driver.find_element(By.ID,'submit').click()
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 time.sleep(1)
 
 #btn_submit.click()
