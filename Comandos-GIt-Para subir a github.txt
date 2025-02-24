@@ -10,6 +10,8 @@ git push -u origin main
 
 …or push an existing repository from the command line
 
+
+git commit -m "Mensaje descriptivo"
 git remote add origin https://github.com/henryseya/SE_AUT_PHYT.git
 git branch -M main
 git push -u origin main
